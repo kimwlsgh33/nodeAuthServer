@@ -1,0 +1,19 @@
+const test = new Promise(async (resolve, reject) => {
+  try {
+    console.log('success')
+    const user = await fetch('flwejflwefjw', {})
+    resolve(user)
+    // then 호출 함수
+  } catch (e) {
+    reject(e)
+  }
+})
+
+test.then((user) => {
+  const id = user.id
+  console.log(id)
+})
+
+test.catch((e) => {
+  console.log(e)
+})
